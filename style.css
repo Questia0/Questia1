@@ -1,0 +1,87 @@
+:root {
+    --gold: #d4af37;
+    --dark-bg: #050505;
+    --glass: rgba(255, 255, 255, 0.03);
+    --player-color: #8a2be2; /* أرجواني للاعب */
+}
+
+body.gate-body {
+    background-color: var(--dark-bg);
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+.luxury-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* حركة الشعار الفخمة */
+.central-logo {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    padding: 5px;
+    animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); transform: scale(1); }
+    50% { box-shadow: 0 0 50px rgba(212, 175, 55, 0.5); transform: scale(1.02); }
+    100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); transform: scale(1); }
+}
+
+.glitter-text {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin: 10px 0;
+    background: linear-gradient(to bottom, #fff 20%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.choices-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+/* الأزرار الزجاجية */
+.glass-btn {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px 20px;
+    width: 300px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-gate:hover {
+    border-color: var(--player-color);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+    transform: translateY(-10px);
+}
+
+.merchant-gate:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    transform: translateY(-10px);
+}
+
+.btn-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+.glass-btn h3 { font-size: 1.8rem; margin: 10px 0; }
+.glass-btn p { font-size: 0.9rem; opacity: 0.7; }
