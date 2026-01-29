@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعداد البطل | QUESTIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="setup-body">
+
+    <div class="setup-container">
+        <h2 class="setup-title">صمم هويتك كبطل</h2>
+        
+        <div class="avatar-selection-area">
+            <div class="avatar-display">
+                <div class="glow-ring basic"></div> <img src="default-avatar.png" id="mainAvatar" class="avatar-img">
+            </div>
+            <p class="xp-lock-text">الأفاتارات الأسطورية تُفتح بالـ XP 🔒</p>
+            
+            <div class="avatar-options">
+                <div class="opt active" onclick="selectAvatar('default-avatar.png', 'basic')">
+                    <img src="avatar1.png">
+                </div>
+                <div class="opt locked">
+                    <img src="avatar2.png">
+                    <span class="lock-price">500 XP</span>
+                </div>
+                <div class="opt locked">
+                    <img src="avatar3.png">
+                    <span class="lock-price">2000 XP</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>الاسم القتالي (سيظهر على بطاقة المنيع)</label>
+            <input type="text" id="playerName" placeholder="أدخل اسمك هنا...">
+        </div>
+
+        <button class="confirm-btn" onclick="saveIdentity()">تأكيد الهوية ودخول الساحة</button>
+    </div>
+
+    <script>
+        function selectAvatar(src, glowClass) {
+            // كود برمجي بسيط لتغيير الصورة (سيتم تفعيله لاحقاً)
+            document.getElementById('mainAvatar').src = src;
+        }
+        function saveIdentity() {
+            // سينقله لصفحة player.html بعد الحفظ
+            window.location.href = "player.html";
+        }
+    </script>
+</body>
+</html>
